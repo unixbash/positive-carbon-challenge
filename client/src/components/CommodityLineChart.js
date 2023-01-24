@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {AreaChart, Area, Legend, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
+import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
 
 
 export default class CommodityLineChart extends PureComponent {
@@ -44,7 +44,7 @@ export default class CommodityLineChart extends PureComponent {
                 >
                     <CartesianGrid strokeDasharray="3 3"/>
                     <XAxis dataKey="timestamp"/>
-                    <YAxis/>
+                    <YAxis unit="€"/>
                     <Tooltip/>
                     <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8"/>
                 </AreaChart>

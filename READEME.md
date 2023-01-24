@@ -15,7 +15,13 @@
 - DB hosted on **localhost** [QuestDB](https://questdb.io/) database on port **8812**, with a table **qdb**, a user: **admin** and password: **quest**
 
 ## Architecture Diagram
-![Alt text](architecture_diagram.jpg?raw=true "Architecture Diagram")
+![Architecture Diagram](images/architecture_diagram.jpg?raw=true "Architecture Diagram")
+
+## Screenshots
+![UI](images/ui.png?raw=true "React UI")
+
+![DB](images/questdb.png?raw=true "QuestDB time-series DB")
+
 
 ## How to start
 
