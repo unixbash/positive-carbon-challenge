@@ -1,0 +1,32 @@
+version: "3"
+
+volumes:
+  questdb_data: {}
+
+services:
+  api:
+    build: ./server/.
+    ports:
+      - "5005:5005"
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+
+  questdb:
+    image: "questdb/questdb:latest"
+    volumes:
+      - questdb_data:/root/.questdb/db
+    ports:
+      - "9000:9000"
+      - "8812:8812"
+
+  client:
+    build: client
+    ports:
+      - '3005:3005'
+    links:
+      - api
+    depends_on:
+      - api
